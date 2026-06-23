@@ -12,7 +12,7 @@ export const personalInfo = {
   cvPath: '/cv/Azhar_Ahmed_CV.pdf',
   socialLinks: [
     { label: 'GitHub', url: 'https://github.com/AzharAhmedP', handle: 'AzharAhmedP' },
-    { label: 'LinkedIn', url: 'https://linkedin.com/in/AzharAhmedP', handle: 'in/AzharAhmedP' },
+    { label: 'LinkedIn', url: 'https://linkedin.com/in/AzharAhmedP', handle: 'AzharAhmedP' },
     { label: 'Hugging Face', url: 'https://huggingface.co/AzharAhmedP', handle: 'AzharAhmedP' },
   ],
   greetings: ['Hello', 'Bonjour', 'Hallo', 'Ola', 'नमस्ते', 'سلام'],
