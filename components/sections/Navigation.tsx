@@ -100,6 +100,7 @@ export default function Navigation() {
             onClick={() => setOpen(true)}
             aria-expanded={open}
             aria-controls="nav-menu"
+            aria-haspopup="dialog"
             className="text-[10px] font-mono text-neutral-500 hover:text-white transition-colors tracking-[0.2em] uppercase"
           >
             Menu

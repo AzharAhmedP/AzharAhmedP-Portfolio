@@ -1,12 +1,23 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { personalInfo } from '@/data/projects'
 import ScrollReveal from '@/components/ui/ScrollReveal'
 import { X } from 'lucide-react'
 
 export default function Certifications() {
   const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null)
+  const lightboxRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (!lightbox) return
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setLightbox(null)
+    }
+    document.addEventListener('keydown', handleKey)
+    lightboxRef.current?.focus()
+    return () => document.removeEventListener('keydown', handleKey)
+  }, [lightbox])
 
   return (
     <section className="px-6 md:px-10 py-24 border-t border-neutral-900">
@@ -46,7 +57,12 @@ export default function Certifications() {
 
         {lightbox && (
           <div
-            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm p-6"
+            ref={lightboxRef}
+            tabIndex={-1}
+            role="dialog"
+            aria-modal="true"
+            aria-label={lightbox.alt}
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm p-6 outline-none"
             onClick={() => setLightbox(null)}
           >
             <button

@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import WorkNav from '@/components/sections/WorkNav'
-import { personalInfo, getProject, projects } from '@/data/projects'
+import { getProject, projects } from '@/data/projects'
 import SharedLayout from '@/components/case-study/SharedLayout'
 import MetaBar from '@/components/case-study/MetaBar'
 import ContextBlock from '@/components/case-study/ContextBlock'
@@ -108,7 +108,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
         )}
 
         {project.performance && (
-          <PerformanceBlock title="Metrics" metrics={project.performance} />
+          <PerformanceBlock title="Performance" metrics={project.performance} />
         )}
 
         {project.dataset && (

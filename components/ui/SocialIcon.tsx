@@ -1,9 +1,3 @@
-export interface SocialLink {
-  label: string
-  url: string
-  handle: string
-}
-
 export default function SocialIcon({ label }: { label: string }) {
   const className = "w-3 h-3"
   

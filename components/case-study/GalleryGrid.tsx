@@ -13,8 +13,8 @@ export default function GalleryGrid({ title, images }: { title: string; images?:
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-neutral-900">
         {images.map((img, i) => (
-          <div key={i} className="bg-neutral-950 aspect-video flex items-center justify-center">
-            <span className="text-neutral-800 text-sm font-mono">[{img.split('/').pop()}]</span>
+          <div key={i} className="bg-neutral-950 aspect-video flex items-center justify-center overflow-hidden">
+            <img src={img} alt={`${title} ${i + 1}`} loading="lazy" className="w-full h-full object-cover" />
           </div>
         ))}
       </div>

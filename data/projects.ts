@@ -169,7 +169,8 @@ export const projects: Project[] = [
 
     heroImage: '/images/projects/pneumo.jpg',
     showLiveDemo: true,
-    liveUrl: 'https://huggingface.co/spaces/azharahmedyzp/PneumoDetect',
+    liveUrl: 'https://huggingface.co/spaces/AzharAhmedP/PneumoDetect',
+    showGithub: true,
     githubUrl: 'https://github.com/AzharAhmedP/PneumoDetect',
     challenge: {
       title: 'Balancing speed and medical accuracy.',
@@ -242,7 +243,8 @@ export const projects: Project[] = [
 
     heroImage: '/images/projects/spamshield.jpg',
     showLiveDemo: true,
-    liveUrl: 'https://huggingface.co/spaces/azharahmedyzp/SpamShield-BERT-HF',
+    liveUrl: 'https://huggingface.co/spaces/AzharAhmedP/SpamShield-BERT-HF',
+    showGithub: true,
     githubUrl: 'https://github.com/AzharAhmedP/SpamShield-BERT',
     challenge: {
       title: 'Transformer inference on a CPU budget.',
@@ -314,7 +316,9 @@ export const projects: Project[] = [
     stack: ['Python', 'Scikit-learn', 'Pandas', 'Matplotlib', 'Seaborn'],
     status: 'Complete',
 
+    showLiveDemo: true,
     liveUrl: 'https://heart-disease-prediction-using-mach-woad.vercel.app',
+    showGithub: true,
     githubUrl: 'https://github.com/AzharAhmedP/Heart_Disease_Prediction_Using_Machine_Learning',
     challenge: {
       title: 'Minimizing false negatives in healthcare.',
@@ -386,7 +390,9 @@ export const projects: Project[] = [
     stack: ['Python', 'TensorFlow', 'Keras', 'Scikit-learn', 'Matplotlib'],
     status: 'Complete',
 
+    showLiveDemo: true,
     liveUrl: 'https://california-housing-price-prediction.vercel.app',
+    showGithub: true,
     githubUrl: 'https://github.com/AzharAhmedP/California_Housing_Price_Prediction-ANN',
     challenge: {
       title: 'Preventing overfitting on tabular data.',
@@ -458,6 +464,7 @@ export const projects: Project[] = [
     stack: ['Python', 'TensorFlow', 'Keras'],
     status: 'Complete',
 
+    showGithub: true,
     githubUrl: 'https://github.com/AzharAhmedP/CNN-Based_Image_Recognition_System_using_Flask',
     challenge: {
       title: 'From notebook to production-ready CNN.',
@@ -529,6 +536,7 @@ export const projects: Project[] = [
     stack: ['Python', 'Streamlit', 'Pandas', 'Matplotlib', 'Seaborn', 'NumPy'],
     status: 'Complete',
 
+    showGithub: true,
     githubUrl: 'https://github.com/AzharAhmedP/Data_Analysis_and_Visualization_Dashboard',
     challenge: {
       title: 'Making data analysis accessible to non-coders.',

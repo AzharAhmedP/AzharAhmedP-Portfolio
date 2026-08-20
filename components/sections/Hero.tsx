@@ -40,10 +40,10 @@ export default function Hero() {
           </p>
         </div>
 
-        <h1 className="text-7xl md:text-9xl lg:text-[10rem] font-bold tracking-tighter leading-none text-white">
+        <h1 className="text-5xl sm:text-7xl md:text-9xl lg:text-[10rem] font-bold tracking-tighter leading-none text-white">
           <TextScramble text="AZHAR" delay={800} duration={1000} />
         </h1>
-        <h1 className="text-7xl md:text-9xl lg:text-[10rem] font-bold tracking-tighter leading-none text-neutral-800 mt-[-0.06em]">
+        <h1 className="text-5xl sm:text-7xl md:text-9xl lg:text-[10rem] font-bold tracking-tighter leading-none text-neutral-800 mt-[-0.06em]">
           <TextScramble text="AHMED" delay={1000} duration={1000} />
         </h1>
 
