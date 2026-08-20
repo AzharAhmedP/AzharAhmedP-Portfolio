@@ -36,7 +36,8 @@ export default function Contact() {
       )
       setStatus('sent')
       setForm({ name: '', country: '', type: 'Full-Time Role', contact: 'Email', email: '', message: '' })
-    } catch {
+    } catch (err) {
+      console.error('EmailJS error:', err)
       setStatus('error')
     }
   }
