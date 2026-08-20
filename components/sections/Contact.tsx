@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import emailjs from '@emailjs/browser'
 import { personalInfo } from '@/data/projects'
 import ScrollReveal from '@/components/ui/ScrollReveal'
 import SocialIcon from '@/components/ui/SocialIcon'
@@ -20,12 +21,19 @@ export default function Contact() {
     }
     setStatus('sending')
     try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
-      })
-      if (!res.ok) throw new Error()
+      await emailjs.send(
+        'service_rpqibac',
+        'template_xgb4f2d',
+        {
+          name: form.name,
+          country: form.country,
+          type: form.type,
+          contact: form.contact,
+          email: form.email,
+          message: form.message,
+        },
+        { publicKey: '7JXB3RPoKnrWsR-NL' }
+      )
       setStatus('sent')
       setForm({ name: '', country: '', type: 'Full-Time Role', contact: 'Email', email: '', message: '' })
     } catch {
