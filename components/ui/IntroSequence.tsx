@@ -17,7 +17,7 @@ export default function IntroSequence() {
   if (done) return null
 
   return (
-    <div className={`fixed inset-0 z-[200] bg-black flex items-center justify-center transition-opacity duration-700 ${phase >= 3 ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+    <div className={`fixed inset-0 z-[1000] bg-black flex items-center justify-center transition-opacity duration-700 ${phase >= 3 ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
       <div className="text-center">
         {/* Phase 0: Initials */}
         <div className={`text-6xl md:text-8xl font-bold tracking-tighter text-white transition-all duration-500 ${phase >= 1 ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}>

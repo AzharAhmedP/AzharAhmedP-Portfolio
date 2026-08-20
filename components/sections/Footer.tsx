@@ -28,7 +28,7 @@ export default function Footer({ isHome = false }: FooterProps) {
       <div className="max-w-6xl mx-auto px-6 md:px-10 py-16 md:py-20">
         <div className="grid md:grid-cols-3 gap-12 md:gap-20">
           <div>
-            <Link href="#hero" className="text-lg font-bold tracking-tight text-white">
+            <Link href={isHome ? "#hero" : "/"} className="text-lg font-bold tracking-tight text-white">
               {personalInfo.initials}
             </Link>
             <p className="text-xs text-neutral-600 mt-4 font-mono leading-relaxed max-w-xs">

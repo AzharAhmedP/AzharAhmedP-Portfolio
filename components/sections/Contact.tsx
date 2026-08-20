@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import { personalInfo } from '@/data/projects'
 import ScrollReveal from '@/components/ui/ScrollReveal'
@@ -10,6 +10,11 @@ import { Download } from 'lucide-react'
 export default function Contact() {
   const [form, setForm] = useState({ name: '', country: '', type: 'Full-Time Role', contact: 'Email', email: '', message: '' })
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  useEffect(() => {
+    return () => { if (timerRef.current) clearTimeout(timerRef.current) }
+  }, [])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -36,8 +41,10 @@ export default function Contact() {
       )
       setStatus('sent')
       setForm({ name: '', country: '', type: 'Full-Time Role', contact: 'Email', email: '', message: '' })
+      timerRef.current = setTimeout(() => setStatus('idle'), 4000)
     } catch {
       setStatus('error')
+      timerRef.current = setTimeout(() => setStatus('idle'), 4000)
     }
   }
 

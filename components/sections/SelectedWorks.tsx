@@ -73,18 +73,26 @@ export default function SelectedWorks() {
                       </div>
                       <div className="hidden md:flex items-center gap-3 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
                         {project.showGithub !== false && project.githubUrl && (
-                          <span
+                          <a
+                            href={project.githubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
                             className="magnetic-btn text-xs font-mono text-white border border-white/20 rounded-full px-5 py-2.5 hover:bg-white hover:text-black"
                           >
                             GitHub →
-                          </span>
+                          </a>
                         )}
                         {project.showLiveDemo && project.liveUrl && (
-                          <span
+                          <a
+                            href={project.liveUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
                             className="magnetic-btn text-xs font-mono text-white border border-white/20 rounded-full px-5 py-2.5 hover:bg-white hover:text-black"
                           >
                             Live Demo →
-                          </span>
+                          </a>
                         )}
                       </div>
                     </div>
