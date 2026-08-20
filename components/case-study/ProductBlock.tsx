@@ -5,7 +5,7 @@ export default function ProductBlock({ title, body }: { title: string; body: str
     <section className="px-6 md:px-10 py-24 border-t border-neutral-900">
       <div className="max-w-6xl mx-auto">
         <ScrollReveal>
-          <p className="text-sm font-mono text-neutral-500 mb-4">The Product</p>
+          <p className="text-sm font-mono text-neutral-600 mb-4 tracking-widest uppercase">The Product</p>
         </ScrollReveal>
         <div className="grid md:grid-cols-2 gap-12 md:gap-20">
           <ScrollReveal>

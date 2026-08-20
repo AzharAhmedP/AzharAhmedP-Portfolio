@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { projects, personalInfo } from '@/data/projects'
+import { projects } from '@/data/projects'
+import WorkNav from '@/components/sections/WorkNav'
+import SharedLayout from '@/components/case-study/SharedLayout'
 import Footer from '@/components/sections/Footer'
 import ScrollToTop from '@/components/sections/ScrollToTop'
 
@@ -11,11 +13,9 @@ export const metadata: Metadata = {
 
 export default function WorkArchive() {
   return (
-    <main className="bg-black text-white min-h-screen">
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-5 md:px-10 bg-black/80 backdrop-blur-sm">
-        <Link href="/" className="text-lg font-bold tracking-tight text-white hover:text-neutral-400 transition-colors">{personalInfo.initials}</Link>
-        <Link href="/" className="text-[10px] font-mono text-neutral-500 hover:text-white transition-colors tracking-widest uppercase">Close</Link>
-      </nav>
+    <SharedLayout>
+    <main id="main-content" className="bg-black text-white min-h-screen">
+      <WorkNav />
 
       <div className="pt-24 px-6 md:px-10">
         <div className="max-w-6xl mx-auto py-12">
@@ -34,7 +34,8 @@ export default function WorkArchive() {
           <Link
             key={project.slug}
             href={`/work/${project.slug}`}
-            className="group flex items-center justify-between px-6 md:px-10 py-6 md:py-8 border-b border-neutral-900 hover:bg-neutral-900/30 transition-colors"
+            className="group flex items-center justify-between px-6 md:px-10 py-6 md:py-8 border-b border-neutral-900 hover:bg-neutral-900/30 transition-all duration-300"
+            style={{ animationDelay: `${i * 50}ms` }}
           >
             <div className="flex items-center gap-4 md:gap-8 min-w-0">
               <span className="text-xs font-mono text-neutral-800 w-6 md:w-8 shrink-0">
@@ -42,7 +43,7 @@ export default function WorkArchive() {
               </span>
               <div className="min-w-0">
                 <h3 className="text-base md:text-xl font-bold text-white group-hover:text-neutral-400 transition-colors truncate">
-                  {project.title.toLowerCase()}
+                  {project.title}
                 </h3>
                 <div className="flex items-center gap-2 mt-1">
                   <p className="text-[10px] md:text-xs text-neutral-600 font-mono truncate">{project.category}</p>
@@ -68,8 +69,9 @@ export default function WorkArchive() {
           </Link>
         </div>
       </div>
-      <Footer />
+      <Footer isHome={false} />
       <ScrollToTop />
     </main>
+    </SharedLayout>
   )
 }

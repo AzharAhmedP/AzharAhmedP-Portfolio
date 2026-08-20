@@ -7,14 +7,18 @@ export default function RotatingText({ words }: { words: string[] }) {
   const [fade, setFade] = useState(true)
 
   useEffect(() => {
+    let timeoutId: ReturnType<typeof setTimeout>
     const interval = setInterval(() => {
       setFade(false)
-      setTimeout(() => {
+      timeoutId = setTimeout(() => {
         setIndex((prev) => (prev + 1) % words.length)
         setFade(true)
       }, 200)
     }, 2000)
-    return () => clearInterval(interval)
+    return () => {
+      clearInterval(interval)
+      clearTimeout(timeoutId)
+    }
   }, [words.length])
 
   return (

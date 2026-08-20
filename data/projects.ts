@@ -8,11 +8,12 @@ export const personalInfo = {
   taglineSub: 'I architect it, train it, ship it, then keep the whole pipeline running.',
   location: 'Hyderabad, Sindh, Pakistan',
   phone: '+92 333 2626501',
-  email: 'azharahmedyzp@gmail.com',
+  email: 'azharahmedp.07@gmail.com',
   cvPath: '/cv/Azhar_Ahmed_CV.pdf',
   socialLinks: [
     { label: 'GitHub', url: 'https://github.com/AzharAhmedP', handle: 'AzharAhmedP' },
     { label: 'LinkedIn', url: 'https://linkedin.com/in/AzharAhmedP', handle: 'in/AzharAhmedP' },
+    { label: 'Instagram', url: 'https://instagram.com/realazharahmed', handle: '@realazharahmed' },
     { label: 'Hugging Face', url: 'https://huggingface.co/AzharAhmedP', handle: 'AzharAhmedP' },
   ],
   greetings: ['Hello', 'Bonjour', 'Hallo', 'Ola', 'नमस्ते', 'سلام'],
@@ -66,10 +67,15 @@ export const personalInfo = {
     },
   ],
   certifications: [
-    { title: 'AI & Data Science Training Program', issuer: 'Saylani Mass IT Training', duration: '14 months' },
-    { title: 'Introduction to Modern AI', issuer: 'Cisco Networking Academy (NetAcad)' },
-    { title: 'Certified Java Developer', issuer: 'People\'s IT Training Programme (PITP)' },
-    { title: 'Certified Web Developer', issuer: 'People\'s IT Training Programme (PITP)' },
+    { title: 'Claude 101', issuer: 'Anthropic', date: 'Jul 2026', image: '/images/certifications/Claude101.png' },
+    { title: 'Certified Java Developer', issuer: 'People\'s IT Training Programme (PITP) — MUET', date: 'Feb 2026', image: '/images/certifications/Cert_JavaDev.jpg' },
+    { title: 'Academic Excellence Award — Java Development', issuer: 'People\'s IT Training Programme (PITP)', date: 'Feb 2026', image: '/images/certifications/Java_Award.jpg' },
+    { title: 'Artificial Intelligence & Data Science', issuer: 'Saylani Mass IT Training', date: 'May 2026', image: '/images/certifications/Cert_AiDS.jpg' },
+    { title: 'Introduction to Modern AI', issuer: 'Cisco Networking Academy (NetAcad)', date: 'Mar 2026', image: '/images/certifications/Intro_to_ModernAi.jpg' },
+    { title: 'Certified Web Developer', issuer: 'People\'s IT Training Programme (PITP) — MUET', date: 'Jan 2025', image: '/images/certifications/Cert_WebDev.jpg' },
+    { title: 'Coding Night 2025 — Hackathon', issuer: 'Saylani Mass IT Training', date: 'Nov 2025', image: '/images/certifications/Cert_CodingNight.jpg' },
+    { title: 'FYP 2026 — Certificate of Appreciation', issuer: 'University of Sindh', date: 'Feb 2026', image: '/images/certifications/AppCert_FYP2026.jpg' },
+    { title: 'FET Sports Gala 2025 — Certificate of Appreciation', issuer: 'University of Sindh', date: 'Nov 2025', image: '/images/certifications/AppCert_SG2025.jpg' },
   ],
   languages: [
     { name: 'English', level: 'Professional Working Proficiency' },
@@ -97,20 +103,19 @@ export const projects: Project[] = [
     stack: ['Python', 'YOLOv8', 'ViT', 'FastAPI', 'React Native', 'Groq'],
     status: 'Deployed on HF Spaces',
 
-    showGithub: false,
-    liveUrl: 'https://huggingface.co/spaces/azharahmedyzp',
+    heroImage: '/images/projects/FasalGuard.jpg',
+    showGithub: true,
     githubUrl: 'https://github.com/AzharAhmedP/FasalGuard',
     challenge: {
       title: 'Single-stage classifiers failed in the field.',
       body: 'Traditional single-stage classifiers trained on lab images performed poorly on real-world farmer photos with cluttered backgrounds. Splitting the pipeline into detection (crops the leaf) then classification (on the clean crop) boosted accuracy by 14% and made the system viable for field use.',
     },
     performance: [
-      { label: 'Classification Accuracy', value: '93%' },
-      { label: 'Detection mAP', value: '93%' },
+      { label: 'Detection Accuracy', value: '93%' },
       { label: 'Disease Classes', value: '38' },
       { label: 'Crop Species', value: '13' },
-      { label: 'Inference Latency', value: '<2s' },
       { label: 'Pipeline Stages', value: '2' },
+      { label: 'Inference Latency', value: '<2s' },
     ],
     dataset: [
       { label: 'Detection Dataset', value: '6,000+ images' },
@@ -149,17 +154,6 @@ export const projects: Project[] = [
           { name: 'LLM Chatbot', tech: ['Groq', 'LLM'], description: 'Conversational follow-up on diagnosis, severity, and treatment using Groq-powered LLM.' },
         ],
       },
-      {
-        type: 'outcome',
-        title: 'What it is, in numbers.',
-        body: '',
-        stats: [
-          { label: 'Detection Accuracy', value: '93%' },
-          { label: 'Disease Classes', value: '38' },
-          { label: 'Crop Species', value: '13' },
-          { label: 'Pipeline Stages', value: '2' },
-        ],
-      },
       ],
   },
   {
@@ -173,6 +167,7 @@ export const projects: Project[] = [
     stack: ['Python', 'ViT', 'Flask', 'Docker', 'Hugging Face'],
     status: 'Live on HF Spaces',
 
+    heroImage: '/images/projects/pneumo.jpg',
     showLiveDemo: true,
     liveUrl: 'https://huggingface.co/spaces/azharahmedyzp/PneumoDetect',
     githubUrl: 'https://github.com/AzharAhmedP/PneumoDetect',
@@ -245,6 +240,7 @@ export const projects: Project[] = [
     stack: ['Python', 'DistilBERT', 'Flask', 'Hugging Face', 'PyTorch'],
     status: 'Live on HF Spaces',
 
+    heroImage: '/images/projects/spamshield.jpg',
     showLiveDemo: true,
     liveUrl: 'https://huggingface.co/spaces/azharahmedyzp/SpamShield-BERT-HF',
     githubUrl: 'https://github.com/AzharAhmedP/SpamShield-BERT',

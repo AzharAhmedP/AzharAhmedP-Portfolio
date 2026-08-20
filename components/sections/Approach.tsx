@@ -1,5 +1,6 @@
 import { projects, personalInfo } from '@/data/projects'
 import ScrollReveal from '@/components/ui/ScrollReveal'
+import RevealText from '@/components/ui/RevealText'
 
 export default function Approach() {
   const liveCount = projects.filter(p => p.liveUrl).length
@@ -18,9 +19,11 @@ export default function Approach() {
 
         <div className="grid md:grid-cols-2 gap-12 md:gap-20">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight">
-              Turning data into decisions.
-            </h2>
+            <RevealText
+              text="Turning data into decisions."
+              as="h2"
+              className="text-3xl md:text-5xl font-bold text-white leading-tight"
+            />
           </ScrollReveal>
           <ScrollReveal>
             <div className="space-y-4 text-neutral-400 leading-relaxed">

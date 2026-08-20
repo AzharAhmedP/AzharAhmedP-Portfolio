@@ -6,6 +6,7 @@ import { personalInfo } from '@/data/projects'
 
 export default function Navigation() {
   const [open, setOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState('hero')
   const menuRef = useRef<HTMLDivElement>(null)
   const triggerRef = useRef<HTMLButtonElement>(null)
 
@@ -16,6 +17,27 @@ export default function Navigation() {
     { id: 'projects', label: '03', title: 'Work', desc: 'Selected projects & case studies' },
     { id: 'contact', label: '04', title: 'Contact', desc: 'Start a conversation' },
   ]
+
+  useEffect(() => {
+    const sectionIds = links.map(l => l.id)
+    const observers: IntersectionObserver[] = []
+
+    sectionIds.forEach(id => {
+      const el = document.getElementById(id)
+      if (!el) return
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) setActiveSection(id)
+        },
+        { rootMargin: '-40% 0px -55% 0px' }
+      )
+      observer.observe(el)
+      observers.push(observer)
+    })
+
+    return () => observers.forEach(o => o.disconnect())
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const scrollTo = (id: string) => {
     setOpen(false)
@@ -60,7 +82,9 @@ export default function Navigation() {
             <button
               key={link.id}
               onClick={() => scrollTo(link.id)}
-              className="text-[10px] font-mono text-neutral-700 hover:text-white transition-colors tracking-widest uppercase"
+              className={`text-[10px] font-mono transition-colors tracking-widest uppercase ${
+                activeSection === link.id ? 'text-white' : 'text-neutral-700 hover:text-white'
+              }`}
             >
               {link.title}
             </button>
@@ -142,7 +166,6 @@ export default function Navigation() {
               </div>
               <div className="text-[10px] text-neutral-800 font-mono leading-relaxed">
                 <p>{personalInfo.location}</p>
-                <p>{personalInfo.phone}</p>
               </div>
             </div>
           </div>

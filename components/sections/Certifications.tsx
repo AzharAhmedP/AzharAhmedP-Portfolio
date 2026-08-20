@@ -1,7 +1,13 @@
+'use client'
+
+import { useState } from 'react'
 import { personalInfo } from '@/data/projects'
 import ScrollReveal from '@/components/ui/ScrollReveal'
+import { X } from 'lucide-react'
 
 export default function Certifications() {
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null)
+
   return (
     <section className="px-6 md:px-10 py-24 border-t border-neutral-900">
       <div className="max-w-6xl mx-auto">
@@ -9,20 +15,56 @@ export default function Certifications() {
           <p className="text-sm font-mono text-neutral-600 mb-8 tracking-widest uppercase">Certifications</p>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-4 gap-px bg-neutral-900">
+        <div className="grid md:grid-cols-3 gap-px bg-neutral-900">
           {personalInfo.certifications.map((cert, i) => (
-            <ScrollReveal key={i}>
-              <div className="bg-black p-8 h-full">
-                <span className="text-2xl text-neutral-800 font-mono">0{i + 1}</span>
-                <h3 className="text-base font-bold text-white mt-4 mb-2">{cert.title}</h3>
+            <ScrollReveal key={i} delay={i * 60}>
+              <div className="bg-black p-8 h-full flex flex-col">
+                <span className="text-2xl text-neutral-800 font-mono">{String(i + 1).padStart(2, '0')}</span>
+                {cert.image && (
+                  <button
+                    onClick={() => setLightbox({ src: cert.image!, alt: cert.title })}
+                    className="mt-4 mb-3 block w-full overflow-hidden rounded border border-neutral-800 hover:border-neutral-600 transition-colors cursor-zoom-in bg-neutral-950 p-6 flex items-center justify-center"
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={cert.image}
+                      alt={cert.title}
+                      loading="lazy"
+                      className="max-w-full max-h-48 object-contain opacity-80 hover:opacity-100 transition-opacity"
+                    />
+                  </button>
+                )}
+                <h3 className="text-base font-bold text-white mt-auto mb-2">{cert.title}</h3>
                 <p className="text-sm text-neutral-500">{cert.issuer}</p>
-                {cert.duration && (
-                  <p className="text-xs text-neutral-700 mt-2 font-mono">{cert.duration}</p>
+                {cert.date && (
+                  <p className="text-xs text-neutral-700 mt-2 font-mono">{cert.date}</p>
                 )}
               </div>
             </ScrollReveal>
           ))}
         </div>
+
+        {lightbox && (
+          <div
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm p-6"
+            onClick={() => setLightbox(null)}
+          >
+            <button
+              onClick={() => setLightbox(null)}
+              className="absolute top-6 right-6 text-neutral-400 hover:text-white transition-colors"
+              aria-label="Close"
+            >
+              <X className="w-6 h-6" />
+            </button>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={lightbox.src}
+              alt={lightbox.alt}
+              className="max-w-full max-h-[85vh] object-contain rounded"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        )}
 
         <ScrollReveal className="mt-16">
           <p className="text-sm font-mono text-neutral-600 mb-6 tracking-widest uppercase">Areas of Interest</p>

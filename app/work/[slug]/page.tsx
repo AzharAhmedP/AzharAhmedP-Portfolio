@@ -1,7 +1,9 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import WorkNav from '@/components/sections/WorkNav'
 import { personalInfo, getProject, projects } from '@/data/projects'
+import SharedLayout from '@/components/case-study/SharedLayout'
 import MetaBar from '@/components/case-study/MetaBar'
 import ContextBlock from '@/components/case-study/ContextBlock'
 import VisionBlock from '@/components/case-study/VisionBlock'
@@ -43,11 +45,9 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
   }
 
   return (
-    <main className="bg-black text-white min-h-screen">
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-5 md:px-10 bg-black/80 backdrop-blur-sm">
-        <Link href="/" className="text-lg font-bold tracking-tight text-white hover:text-neutral-400 transition-colors">{personalInfo.initials}</Link>
-        <Link href="/" className="text-[10px] font-mono text-neutral-500 hover:text-white transition-colors tracking-widest uppercase">Close</Link>
-      </nav>
+    <SharedLayout>
+    <main id="main-content" className="bg-black text-white min-h-screen">
+      <WorkNav />
 
       <div className="pt-20">
         <div className="px-6 md:px-10 py-12 md:py-16">
@@ -128,8 +128,9 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
           <NextCase slug={project.nextSlug} title={project.nextTitle} />
         )}
       </div>
-      <Footer />
+      <Footer isHome={false} />
       <ScrollToTop />
     </main>
+    </SharedLayout>
   )
 }

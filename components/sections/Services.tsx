@@ -21,8 +21,8 @@ export default function Services() {
           {serviceGroups.map((group, i) => {
             const cat = personalInfo.skillCategories.find(c => c.label === group.cat)
             return (
-              <ScrollReveal key={i}>
-                <div className="bg-black p-8 h-full hover:bg-neutral-950 transition-colors">
+              <ScrollReveal key={i} delay={i * 80}>
+                <div className="bg-black p-8 h-full hover:bg-neutral-950 transition-colors duration-300">
                   <span className="text-xs font-mono text-neutral-700">0{i + 1}</span>
                   <h3 className="text-base font-bold text-white mt-6 mb-6 tracking-wide">{group.title}</h3>
                   <ul className="space-y-3">

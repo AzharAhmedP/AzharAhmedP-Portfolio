@@ -5,7 +5,7 @@ export default function VisionBlock({ title, body }: { title: string; body: stri
     <section className="px-6 md:px-10 py-24 border-t border-neutral-900">
       <div className="max-w-6xl mx-auto">
         <ScrollReveal>
-          <p className="text-sm font-mono text-neutral-500 mb-4">The Vision</p>
+          <p className="text-sm font-mono text-neutral-600 mb-4 tracking-widest uppercase">The Vision</p>
         </ScrollReveal>
         <div className="grid md:grid-cols-2 gap-12 md:gap-20">
           <ScrollReveal>

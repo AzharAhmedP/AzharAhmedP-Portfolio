@@ -11,8 +11,8 @@ export default function Education() {
 
         <div className="grid md:grid-cols-2 gap-12 md:gap-20">
           {personalInfo.education.map((edu, i) => (
-            <ScrollReveal key={i}>
-              <div className="border-l border-neutral-800 pl-6">
+            <ScrollReveal key={i} delay={i * 100}>
+              <div className="border-l border-neutral-800 pl-6 card-hover p-4 -m-4 rounded">
                 <p className="text-xs font-mono text-neutral-600 mb-2">{edu.period}</p>
                 <h3 className="text-xl font-bold text-white">{edu.degree}</h3>
                 <p className="text-sm text-neutral-500 mt-1">{edu.school}</p>
