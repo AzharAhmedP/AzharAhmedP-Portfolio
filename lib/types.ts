@@ -11,6 +11,7 @@ export interface Project {
   slug: string
   title: string
   subtitle: string
+  summary: string
   category: string
   year: number | string
   client: string

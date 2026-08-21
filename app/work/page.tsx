@@ -42,9 +42,12 @@ export default function WorkArchive() {
                 {String(i + 1).padStart(2, '0')}
               </span>
               <div className="min-w-0">
-                <h3 className="text-base md:text-xl font-bold text-white group-hover:text-neutral-400 transition-colors truncate">
+                <h3 className="text-base md:text-xl font-bold text-white group-hover:text-neutral-400 transition-colors">
                   {project.title}
                 </h3>
+                <p className="text-[10px] md:text-xs text-neutral-600 mt-1 max-w-lg leading-relaxed hidden md:block">
+                  {project.summary}
+                </p>
                 <div className="flex items-center gap-2 mt-1">
                   <p className="text-[10px] md:text-xs text-neutral-600 font-mono truncate">{project.category}</p>
                   {project.liveUrl && <span className="text-[10px] text-green-900 shrink-0">●</span>}
