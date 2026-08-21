@@ -22,9 +22,6 @@ export default function Contact() {
       const text = `Hey Azhar! My name is ${form.name} and I am from ${form.country}.\n\nLet's connect about ${form.type}.\n\nWe can talk in more detail at ${form.email}\n\nIn short, ${form.message}`
       const waNumber = personalInfo.phone.replace(/[^0-9]/g, '')
       window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(text)}`, '_blank')
-      setStatus('sent')
-      setForm({ name: '', country: '', type: 'Full-Time Role', contact: 'Email', email: '', message: '' })
-      timerRef.current = setTimeout(() => setStatus('idle'), 4000)
       return
     }
     setStatus('sending')

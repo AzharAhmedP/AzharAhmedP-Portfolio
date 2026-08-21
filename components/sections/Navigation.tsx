@@ -13,7 +13,7 @@ export default function Navigation() {
   const links = [
     { id: 'hero', label: '00', title: 'Home', desc: 'Overview & introduction' },
     { id: 'approach', label: '01', title: 'About', desc: 'Background & approach' },
-    { id: 'services', label: '02', title: 'Skills', desc: 'Technical expertise & toolkit' },
+    { id: 'services', label: '02', title: 'Services', desc: 'Expert solutions & toolkit' },
     { id: 'projects', label: '03', title: 'Work', desc: 'Selected projects & case studies' },
     { id: 'contact', label: '04', title: 'Contact', desc: 'Start a conversation' },
   ]

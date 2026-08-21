@@ -67,10 +67,11 @@ export default function Hero() {
 
         <div className="mt-10 flex flex-wrap gap-2">
           {[
+            { key: 'MACHINE LEARNING', label: 'Machine Learning' },
             { key: 'DEEP LEARNING', label: 'Deep Learning' },
+            { key: 'NLP & LLMs', label: 'NLP & LLMs' },
             { key: 'COMPUTER VISION', label: 'Computer Vision' },
-            { key: 'NLP & GENERATIVE AI', label: 'NLP' },
-            { key: 'DATA SCIENCE', label: 'Data Science' },
+            { key: 'DATA ANALYSIS', label: 'Data Science' },
           ].filter(t => personalInfo.skillCategories.some(c => c.label === t.key)).map(({ label }) => (
             <span
               key={label}
@@ -90,18 +91,17 @@ export default function Hero() {
             <span className="ml-2 group-hover:translate-x-1 inline-block transition-transform">→</span>
           </a>
           <a
-            href="#projects"
-            className="magnetic-btn group text-sm font-mono text-white border border-neutral-700 rounded-full px-6 py-3 hover:border-neutral-500 hover:bg-white/5"
-          >
-            View projects
-            <span className="ml-2 group-hover:translate-x-1 inline-block transition-transform">↓</span>
-          </a>
-          <a
             href="/cv/Azhar_Ahmed_CV.pdf"
             download
-            className="text-xs font-mono text-neutral-600 hover:text-white transition-colors link-underline"
+            className="magnetic-btn text-sm font-mono text-neutral-400 border border-neutral-800 rounded-full px-6 py-3 hover:border-neutral-600 hover:text-white"
           >
-            Download CV
+            Download CV ↓
+          </a>
+          <a
+            href="#projects"
+            className="link-underline text-xs font-mono text-neutral-600 hover:text-white"
+          >
+            View work ↓
           </a>
         </div>
 
@@ -131,7 +131,7 @@ export default function Hero() {
         <Marquee className="py-4">
           {(() => {
             const get = (label: string) => personalInfo.skillCategories.find(c => c.label === label)?.items || []
-            return [...get('LANGUAGES & FUNDAMENTALS'), ...get('MACHINE LEARNING').slice(0, 3), ...get('DEEP LEARNING').slice(0, 3), ...get('DEPLOYMENT')]
+            return [...get('LANGUAGES'), ...get('MACHINE LEARNING').slice(0, 3), ...get('DEEP LEARNING').slice(0, 3), ...get('TOOLS')]
           })().map((skill) => (
             <span key={skill} className="text-[10px] font-mono text-neutral-700 whitespace-nowrap tracking-wider">
               {skill.toUpperCase()}

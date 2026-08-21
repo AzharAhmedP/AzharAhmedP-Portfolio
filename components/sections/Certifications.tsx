@@ -7,13 +7,10 @@ import { X } from 'lucide-react'
 
 export default function Certifications() {
   const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null)
-  const [showAll, setShowAll] = useState(false)
   const lightboxRef = useRef<HTMLDivElement>(null)
 
-  const primary = personalInfo.certifications.filter(c => c.tier === 'primary')
-  const secondary = personalInfo.certifications.filter(c => c.tier === 'secondary')
-  const other = personalInfo.certifications.filter(c => c.tier === 'other')
-  const displayCerts = showAll ? [...primary, ...secondary, ...other] : primary
+  const primary = personalInfo.certifications.filter(c => c.primary)
+  const secondary = personalInfo.certifications.filter(c => !c.primary)
 
   useEffect(() => {
     if (!lightbox) return
@@ -32,8 +29,8 @@ export default function Certifications() {
           <p className="text-sm font-mono text-neutral-600 mb-8 tracking-widest uppercase">Certifications</p>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-neutral-900">
-          {displayCerts.map((cert, i) => (
+        <div className="grid md:grid-cols-3 gap-px bg-neutral-900">
+          {primary.map((cert, i) => (
             <ScrollReveal key={i} delay={i * 60}>
               <div className="bg-black p-8 h-full flex flex-col">
                 <span className="text-2xl text-neutral-800 font-mono">{String(i + 1).padStart(2, '0')}</span>
@@ -61,14 +58,19 @@ export default function Certifications() {
           ))}
         </div>
 
-        {!showAll && (secondary.length > 0 || other.length > 0) && (
-          <ScrollReveal className="mt-8">
-            <button
-              onClick={() => setShowAll(true)}
-              className="text-xs font-mono text-neutral-600 hover:text-white transition-colors border border-neutral-800 rounded-full px-5 py-2 hover:border-neutral-600"
-            >
-              Show all {primary.length + secondary.length + other.length} certifications
-            </button>
+        {secondary.length > 0 && (
+          <ScrollReveal className="mt-12">
+            <p className="text-sm font-mono text-neutral-600 mb-4 tracking-widest uppercase">Additional</p>
+            <div className="flex flex-wrap gap-x-8 gap-y-3">
+              {secondary.map((cert, i) => (
+                <div key={i} className="text-xs text-neutral-500 font-mono">
+                  <span className="text-neutral-300">{cert.title}</span>
+                  <span className="text-neutral-700 mx-2">—</span>
+                  <span>{cert.issuer}</span>
+                  {cert.date && <span className="text-neutral-700 ml-2">{cert.date}</span>}
+                </div>
+              ))}
+            </div>
           </ScrollReveal>
         )}
 

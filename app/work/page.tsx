@@ -7,8 +7,8 @@ import Footer from '@/components/sections/Footer'
 import ScrollToTop from '@/components/sections/ScrollToTop'
 
 export const metadata: Metadata = {
-  title: 'All Projects | Azhar Ahmed',
-  description: 'Every AI/ML system I\'ve built, deployed, and shipped — from computer vision to NLP to data dashboards.',
+  title: 'Work Archive | Azhar Ahmed',
+  description: 'Every project I\'ve designed, built, and shipped.',
 }
 
 export default function WorkArchive() {
