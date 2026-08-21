@@ -90,17 +90,18 @@ export default function Hero() {
             <span className="ml-2 group-hover:translate-x-1 inline-block transition-transform">→</span>
           </a>
           <a
-            href="/cv/Azhar_Ahmed_CV.pdf"
-            download
-            className="magnetic-btn text-sm font-mono text-neutral-400 border border-neutral-800 rounded-full px-6 py-3 hover:border-neutral-600 hover:text-white"
+            href="#projects"
+            className="magnetic-btn group text-sm font-mono text-white border border-neutral-700 rounded-full px-6 py-3 hover:border-neutral-500 hover:bg-white/5"
           >
-            Download CV ↓
+            View projects
+            <span className="ml-2 group-hover:translate-x-1 inline-block transition-transform">↓</span>
           </a>
           <a
-            href="#projects"
-            className="link-underline text-xs font-mono text-neutral-600 hover:text-white"
+            href="/cv/Azhar_Ahmed_CV.pdf"
+            download
+            className="text-xs font-mono text-neutral-600 hover:text-white transition-colors link-underline"
           >
-            View work ↓
+            Download CV
           </a>
         </div>
 

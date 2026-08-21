@@ -9,7 +9,7 @@ export default function ProcessCarousel() {
           <p className="text-sm font-mono text-neutral-600 mb-12 tracking-widest uppercase">How I Work</p>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-5 gap-px bg-neutral-900">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-px bg-neutral-900">
           {personalInfo.process.map((step, i) => (
             <ScrollReveal key={i} delay={i * 80}>
               <div className="bg-black p-6 md:p-8 h-full">

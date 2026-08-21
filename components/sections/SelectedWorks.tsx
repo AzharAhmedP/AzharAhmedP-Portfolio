@@ -79,6 +79,30 @@ export default function SelectedWorks() {
                           {project.stack.join(' \u00B7 ')}
                         </p>
                       </div>
+                      <div className="flex md:hidden items-center gap-3 mt-4">
+                        {project.showGithub !== false && project.githubUrl && (
+                          <a
+                            href={project.githubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
+                            className="text-[10px] font-mono text-neutral-500 border border-neutral-800 rounded-full px-4 py-1.5 hover:border-neutral-600 hover:text-white transition-all"
+                          >
+                            Code
+                          </a>
+                        )}
+                        {project.showLiveDemo && project.liveUrl && (
+                          <a
+                            href={project.liveUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
+                            className="text-[10px] font-mono text-green-900/80 border border-neutral-800 rounded-full px-4 py-1.5 hover:border-green-800 hover:text-green-700 transition-all"
+                          >
+                            Live
+                          </a>
+                        )}
+                      </div>
                       <div className="hidden md:flex items-center gap-3 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
                         {project.showGithub !== false && project.githubUrl && (
                           <a

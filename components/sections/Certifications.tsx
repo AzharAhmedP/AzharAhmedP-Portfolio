@@ -32,7 +32,7 @@ export default function Certifications() {
           <p className="text-sm font-mono text-neutral-600 mb-8 tracking-widest uppercase">Certifications</p>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-neutral-900">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-neutral-900">
           {displayCerts.map((cert, i) => (
             <ScrollReveal key={i} delay={i * 60}>
               <div className="bg-black p-8 h-full flex flex-col">

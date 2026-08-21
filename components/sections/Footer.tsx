@@ -13,7 +13,7 @@ export default function Footer({ isHome = false }: FooterProps) {
   const navLinks = isHome
     ? [
         { label: 'About', href: '#approach' },
-        { label: 'Services', href: '#services' },
+        { label: 'Skills', href: '#services' },
         { label: 'Work', href: '#projects' },
         { label: 'Contact', href: '#contact' },
         { label: 'All Projects', href: '/work' },
