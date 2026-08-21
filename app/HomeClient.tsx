@@ -28,10 +28,10 @@ export default function HomeClient() {
           <Approach />
           <Education />
           <Certifications />
-          <Services />
           <SelectedWorks />
-          <ArchiveCTA />
+          <Services />
           <ProcessCarousel />
+          <ArchiveCTA />
           <Contact />
         </main>
       </PageTransition>

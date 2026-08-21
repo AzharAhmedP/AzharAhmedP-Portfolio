@@ -14,18 +14,18 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://azharahmed.dev'),
-  title: "Azhar Ahmed | AI & Data Science Portfolio",
-  description: "Aspiring Data Scientist | AI, Machine Learning & Deep Learning Enthusiast",
+  title: "Azhar Ahmed | Data Scientist & AI/ML Developer",
+  description: "AI/ML Developer building end-to-end machine learning systems — from data to deployment. Specializing in Computer Vision, NLP, and Deep Learning.",
   openGraph: {
-    title: "Azhar Ahmed | AI & Data Science Portfolio",
-    description: "Aspiring Data Scientist | AI, Machine Learning & Deep Learning Enthusiast",
+    title: "Azhar Ahmed | Data Scientist & AI/ML Developer",
+    description: "AI/ML Developer building end-to-end machine learning systems — from data to deployment. Specializing in Computer Vision, NLP, and Deep Learning.",
     type: "website",
-    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Azhar Ahmed — AI & Data Science Portfolio' }],
+    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Azhar Ahmed — Data Scientist & AI/ML Developer' }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Azhar Ahmed | AI & Data Science Portfolio",
-    description: "Aspiring Data Scientist | AI, Machine Learning & Deep Learning Enthusiast",
+    title: "Azhar Ahmed | Data Scientist & AI/ML Developer",
+    description: "AI/ML Developer building end-to-end machine learning systems — from data to deployment. Specializing in Computer Vision, NLP, and Deep Learning.",
     images: ['/og.png'],
   },
   robots: { index: true, follow: true },

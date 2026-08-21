@@ -108,7 +108,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
         )}
 
         {project.performance && (
-          <PerformanceBlock title="Performance" metrics={project.performance} />
+          <PerformanceBlock metrics={project.performance} />
         )}
 
         {project.dataset && (

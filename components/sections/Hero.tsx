@@ -67,11 +67,10 @@ export default function Hero() {
 
         <div className="mt-10 flex flex-wrap gap-2">
           {[
-            { key: 'MACHINE LEARNING', label: 'Machine Learning' },
             { key: 'DEEP LEARNING', label: 'Deep Learning' },
-            { key: 'NLP & LLMs', label: 'NLP & LLMs' },
             { key: 'COMPUTER VISION', label: 'Computer Vision' },
-            { key: 'DATA ANALYSIS', label: 'Data Science' },
+            { key: 'NLP & GENERATIVE AI', label: 'NLP' },
+            { key: 'DATA SCIENCE', label: 'Data Science' },
           ].filter(t => personalInfo.skillCategories.some(c => c.label === t.key)).map(({ label }) => (
             <span
               key={label}
@@ -131,7 +130,7 @@ export default function Hero() {
         <Marquee className="py-4">
           {(() => {
             const get = (label: string) => personalInfo.skillCategories.find(c => c.label === label)?.items || []
-            return [...get('LANGUAGES'), ...get('MACHINE LEARNING').slice(0, 3), ...get('DEEP LEARNING').slice(0, 3), ...get('TOOLS')]
+            return [...get('LANGUAGES & FUNDAMENTALS'), ...get('MACHINE LEARNING').slice(0, 3), ...get('DEEP LEARNING').slice(0, 3), ...get('DEPLOYMENT')]
           })().map((skill) => (
             <span key={skill} className="text-[10px] font-mono text-neutral-700 whitespace-nowrap tracking-wider">
               {skill.toUpperCase()}

@@ -13,7 +13,7 @@ export default function ArchiveCTA() {
 
         <ScrollReveal>
           <p className="text-lg text-neutral-400 max-w-2xl mb-2">
-            What&apos;s above is just a selection. The full index holds every project I&apos;ve designed, built, and shipped.
+            The three above are the strongest. The full archive holds every system I&apos;ve built and deployed.
           </p>
           <p className="text-xs font-mono text-neutral-700 mt-2 mb-8">
             {remaining} more projects in the archive. Every line considered. Every build, shipped.

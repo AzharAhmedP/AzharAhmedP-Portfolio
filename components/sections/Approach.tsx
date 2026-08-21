@@ -4,11 +4,6 @@ import RevealText from '@/components/ui/RevealText'
 
 export default function Approach() {
   const liveCount = projects.filter(p => p.liveUrl).length
-  const bestAccuracy = projects
-    .flatMap(p => p.performance || [])
-    .filter(m => m.value.includes('%'))
-    .map(m => parseFloat(m.value))
-    .reduce((best, n) => (n > best ? n : best), 0)
 
   return (
     <section id="approach" className="px-6 md:px-10 py-24 md:py-32 border-t border-neutral-900">
@@ -28,32 +23,28 @@ export default function Approach() {
           <ScrollReveal>
             <div className="space-y-4 text-neutral-400 leading-relaxed">
               <p>
-                Certified Data Scientist and AI enthusiast currently pursuing a BS in Information Technology at the University of Sindh. Skilled in Machine Learning, Deep Learning, Data Analysis, and Python development, with hands-on experience building predictive models, neural networks, and interactive data applications.
+                {personalInfo.about}
               </p>
               <p>
-                Passionate about leveraging data-driven technologies to solve real-world problems — from crop disease detection for farmers to pneumonia diagnosis for clinicians — and continuously expanding expertise through practical projects and professional certifications.
+                From crop disease detection for farmers to pneumonia diagnosis for clinicians \u2014 I build systems that work beyond the notebook. Every project follows the same pipeline: data \u2192 model \u2192 API \u2192 deployment.
               </p>
             </div>
           </ScrollReveal>
         </div>
 
         <ScrollReveal className="mt-20">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 border-t border-neutral-900 pt-12">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 border-t border-neutral-900 pt-12">
             <div>
               <p className="text-3xl font-bold text-white">{projects.length}+</p>
-              <p className="text-sm text-neutral-600 mt-1">Projects Shipped</p>
-            </div>
-            <div>
-              <p className="text-3xl font-bold text-white">{personalInfo.certifications.length}</p>
-              <p className="text-sm text-neutral-600 mt-1">Certifications</p>
-            </div>
-            <div>
-              <p className="text-3xl font-bold text-white">{bestAccuracy}%</p>
-              <p className="text-sm text-neutral-600 mt-1">Best Model Accuracy</p>
+              <p className="text-sm text-neutral-600 mt-1">AI/ML Projects Built</p>
             </div>
             <div>
               <p className="text-3xl font-bold text-white">{liveCount}</p>
               <p className="text-sm text-neutral-600 mt-1">Live Deployments</p>
+            </div>
+            <div>
+              <p className="text-3xl font-bold text-white">{personalInfo.certifications.filter(c => c.tier === 'primary').length}</p>
+              <p className="text-sm text-neutral-600 mt-1">AI/ML Certifications</p>
             </div>
           </div>
         </ScrollReveal>
