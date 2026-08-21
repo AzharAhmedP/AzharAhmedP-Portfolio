@@ -61,7 +61,7 @@ export default function Contact() {
               Start a conversation.
             </h2>
             <p className="text-neutral-600 text-sm mb-10 max-w-sm font-mono leading-relaxed">
-              Whether it&apos;s a project, collaboration, or just saying hello — I&apos;ll respond within 24 hours.
+              Whether it&apos;s a project, collaboration, or just saying hello — I&apos;ll get back to you as soon as I can.
             </p>
 
             <div className="space-y-5">

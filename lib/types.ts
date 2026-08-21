@@ -29,4 +29,6 @@ export interface Project {
   dataset?: { label: string; value: string }[]
   nextSlug?: string
   nextTitle?: string
+  contribution?: string
+  disclaimer?: string
 }

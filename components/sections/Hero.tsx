@@ -129,10 +129,7 @@ export default function Hero() {
 
       <div className="absolute bottom-0 left-0 right-0 border-t border-neutral-900 bg-black/80 backdrop-blur-sm">
         <Marquee className="py-4">
-          {(() => {
-            const get = (label: string) => personalInfo.skillCategories.find(c => c.label === label)?.items || []
-            return [...get('LANGUAGES'), ...get('MACHINE LEARNING').slice(0, 3), ...get('DEEP LEARNING').slice(0, 3), ...get('TOOLS')]
-          })().map((skill) => (
+          {['Python', 'PyTorch', 'TensorFlow', 'Scikit-learn', 'YOLO', 'ViT', 'Transformers', 'FastAPI', 'Flask', 'Docker', 'Hugging Face', 'Streamlit'].map((skill) => (
             <span key={skill} className="text-[10px] font-mono text-neutral-700 whitespace-nowrap tracking-wider">
               {skill.toUpperCase()}
               <span className="mx-6 text-neutral-900">◇</span>

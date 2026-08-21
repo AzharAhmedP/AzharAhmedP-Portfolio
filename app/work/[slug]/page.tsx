@@ -115,6 +115,23 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
           <DatasetBlock metrics={project.dataset} />
         )}
 
+        {project.contribution && (
+          <section className="px-6 md:px-10 py-24 border-t border-neutral-900">
+            <div className="max-w-6xl mx-auto">
+              <p className="text-sm font-mono text-neutral-600 mb-4 tracking-widest uppercase">My Contribution</p>
+              <p className="text-base text-neutral-400 leading-relaxed max-w-2xl">{project.contribution}</p>
+            </div>
+          </section>
+        )}
+
+        {project.disclaimer && (
+          <section className="px-6 md:px-10 py-12 border-t border-neutral-900">
+            <div className="max-w-6xl mx-auto">
+              <p className="text-xs text-neutral-600 font-mono leading-relaxed max-w-2xl">{project.disclaimer}</p>
+            </div>
+          </section>
+        )}
+
         <LinksBar githubUrl={project.githubUrl} liveUrl={project.liveUrl} />
 
         <div className="border-t border-neutral-900 px-6 md:px-10 py-12">
