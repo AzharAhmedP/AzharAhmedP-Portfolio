@@ -33,7 +33,7 @@ export default function Approach() {
         </div>
 
         <ScrollReveal className="mt-20">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 border-t border-neutral-900 pt-12">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12 border-t border-neutral-900 pt-12">
             <div>
               <p className="text-3xl font-bold text-white">{projects.length}+</p>
               <p className="text-sm text-neutral-600 mt-1">Projects Shipped</p>
