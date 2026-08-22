@@ -5,7 +5,7 @@ export const personalInfo = {
   initials: 'AA',
   title: 'Data Scientist  |  AI/ML Developer  |  IT Undergraduate',
   tagline: 'I build AI/ML systems from data to deployment.',
-  taglineSub: 'I architect it, train it, deploy it, then keep the pipeline running.',
+  taglineSub: 'I architect it, train it, deploy it, then iterate.',
   location: 'Hyderabad, Sindh, Pakistan',
   phone: '+92 333 2626501',
   email: 'azharahmedp.07@gmail.com',
@@ -50,8 +50,8 @@ export const personalInfo = {
     },
     {
       step: '05',
-      title: 'Ship & monitor.',
-      body: 'The last 10% is what users feel: graceful failure handling, model monitoring, and the edge case I kill before it kills inference.',
+      title: 'Ship & improve.',
+      body: 'The last 10% is what users feel: graceful failure handling, thorough evaluation, and the edge case I catch before it catches me in production.',
     },
   ],
   education: [
