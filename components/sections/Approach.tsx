@@ -47,8 +47,8 @@ export default function Approach() {
               <p className="text-sm text-neutral-600 mt-1">Live Deployments</p>
             </div>
             <div>
-              <p className="text-3xl font-bold text-white">{liveCount}</p>
-              <p className="text-sm text-neutral-600 mt-1">Live Deployments</p>
+              <p className="text-3xl font-bold text-white">3</p>
+              <p className="text-sm text-neutral-600 mt-1">AI Domains</p>
             </div>
           </div>
         </ScrollReveal>
