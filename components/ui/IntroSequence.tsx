@@ -20,13 +20,13 @@ export default function IntroSequence() {
     <div className={`fixed inset-0 z-[1000] bg-black flex items-center justify-center transition-opacity duration-700 ${phase >= 3 ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
       <div className="text-center">
         {/* Phase 0: Initials */}
-        <div className={`text-6xl md:text-8xl font-bold tracking-tighter text-white transition-all duration-500 ${phase >= 1 ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}>
+        <div className={`text-5xl md:text-7xl font-bold tracking-tighter text-white transition-all duration-500 ${phase >= 1 ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}>
           AA
         </div>
 
         {/* Phase 1: Full name */}
         <div className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ${phase >= 1 && phase < 3 ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}`}>
-          <span className="text-4xl md:text-6xl font-bold tracking-tighter text-white">
+            <span className="text-3xl md:text-5xl font-bold tracking-tighter text-white">
             AZHAR<span className="text-neutral-700">AHMED</span>
           </span>
         </div>

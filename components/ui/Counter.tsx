@@ -43,7 +43,7 @@ export default function Counter({ value, suffix = '', label }: { value: number; 
 
   return (
     <div ref={ref} className="text-center">
-      <div className="text-5xl font-bold tracking-tight text-white md:text-6xl">
+      <div className="text-4xl font-bold tracking-tight text-white md:text-5xl">
         {count}{suffix}
       </div>
       {label && <div className="mt-2 text-sm text-neutral-500">{label}</div>}

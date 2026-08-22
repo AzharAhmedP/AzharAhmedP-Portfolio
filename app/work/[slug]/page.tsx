@@ -79,7 +79,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
                 </a>
               )}
             </div>
-            <h1 className="text-4xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-white mt-4">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-white mt-4">
               {project.title}
             </h1>
             <p className="text-sm text-neutral-600 mt-4 font-mono max-w-lg mx-auto">{project.subtitle}</p>

@@ -10,7 +10,7 @@ export default function OutcomeMetrics({ title, stats }: { title: string; stats?
           <p className="text-sm font-mono text-neutral-600 mb-4 tracking-widest uppercase">Outcome</p>
         </ScrollReveal>
         <ScrollReveal>
-          <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-12">{title}</h2>
+          <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight mb-12">{title}</h2>
         </ScrollReveal>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {stats.map((stat) => {

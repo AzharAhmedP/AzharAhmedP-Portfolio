@@ -9,7 +9,7 @@ export default function ArchitectureGrid({ title, layers }: { title: string; lay
           <p className="text-sm font-mono text-neutral-600 mb-4 tracking-widest uppercase">Architecture</p>
         </ScrollReveal>
         <ScrollReveal>
-          <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-12">{title}</h2>
+          <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight mb-12">{title}</h2>
         </ScrollReveal>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-px bg-neutral-900">
           {layers.map((layer, i) => (

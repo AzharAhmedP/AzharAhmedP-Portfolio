@@ -20,7 +20,7 @@ export default function WorkArchive() {
       <div className="pt-24 px-6 md:px-10">
         <div className="max-w-6xl mx-auto py-12">
           <Link href="/" className="text-xs font-mono text-neutral-700 hover:text-white transition-colors">← Back</Link>
-          <h1 className="text-5xl md:text-8xl font-bold tracking-tighter text-white mt-8 mb-4">
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tighter text-white mt-8 mb-4">
             works<span className="text-neutral-800">*</span>
           </h1>
           <p className="text-xs text-neutral-600 mb-16 max-w-xl font-mono">

@@ -17,7 +17,7 @@ export default function Approach() {
             <RevealText
               text="Turning data into decisions."
               as="h2"
-              className="text-3xl md:text-5xl font-bold text-white leading-tight"
+              className="text-2xl md:text-4xl font-bold text-white leading-tight"
             />
           </ScrollReveal>
           <ScrollReveal>

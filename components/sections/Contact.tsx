@@ -57,7 +57,7 @@ export default function Contact() {
 
         <div className="grid md:grid-cols-2 gap-12 md:gap-20">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-6">
+            <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight mb-6">
               Start a conversation.
             </h2>
             <p className="text-neutral-600 text-sm mb-10 max-w-sm font-mono leading-relaxed">

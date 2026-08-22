@@ -142,7 +142,7 @@ export default function Navigation() {
                 >
                   <span className="text-[10px] font-mono text-neutral-800 w-10 tracking-widest">{link.label}</span>
                   <div>
-                    <span className="text-3xl md:text-6xl font-bold text-white group-hover:text-neutral-600 transition-colors duration-300">
+                    <span className="text-2xl md:text-4xl font-bold text-white group-hover:text-neutral-600 transition-colors duration-300">
                       {link.title}
                     </span>
                     <p className="text-[10px] text-neutral-700 mt-1.5 font-mono">{link.desc}</p>

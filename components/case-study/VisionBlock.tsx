@@ -9,7 +9,7 @@ export default function VisionBlock({ title, body }: { title: string; body: stri
         </ScrollReveal>
         <div className="grid md:grid-cols-2 gap-12 md:gap-20">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight">{title}</h2>
+            <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight">{title}</h2>
           </ScrollReveal>
           <ScrollReveal>
             <p className="text-base text-neutral-400 leading-relaxed">{body}</p>

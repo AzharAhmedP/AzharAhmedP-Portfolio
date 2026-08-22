@@ -64,7 +64,7 @@ export default function SelectedWorks() {
                     </div>
                     <div className="flex items-end justify-between">
                       <div className="max-w-xl">
-                        <h2 className="text-3xl md:text-6xl font-bold text-white transition-colors duration-300 group-hover:text-neutral-300">
+                        <h2 className="text-2xl md:text-4xl font-bold text-white transition-colors duration-300 group-hover:text-neutral-300">
                           {project.title}
                         </h2>
                         <p className="text-neutral-500 mt-3 text-sm leading-relaxed transition-colors duration-300 group-hover:text-neutral-400">
