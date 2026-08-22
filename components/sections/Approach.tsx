@@ -33,7 +33,7 @@ export default function Approach() {
         </div>
 
         <ScrollReveal className="mt-20">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 border-t border-neutral-900 pt-12">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 border-t border-neutral-900 pt-12">
             <div>
               <p className="text-3xl font-bold text-white">{projects.length}+</p>
               <p className="text-sm text-neutral-600 mt-1">Projects Shipped</p>
@@ -45,10 +45,6 @@ export default function Approach() {
             <div>
               <p className="text-3xl font-bold text-white">{liveCount}</p>
               <p className="text-sm text-neutral-600 mt-1">Live Deployments</p>
-            </div>
-            <div>
-              <p className="text-3xl font-bold text-white">3</p>
-              <p className="text-sm text-neutral-600 mt-1">AI Domains</p>
             </div>
           </div>
         </ScrollReveal>
