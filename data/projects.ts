@@ -41,7 +41,7 @@ export const personalInfo = {
     {
       step: '03',
       title: 'Prototype fast.',
-      body: 'I build quick end-to-end baselines while the iteration cost is low. If the prototype doesn\u2019t hold up on real inputs, neither will production.',
+      body: 'I build quick end-to-end baselines while the iteration cost is low. If the prototype doesn\u2019t hold up on real inputs, it won\u2019t hold up when deployed.',
     },
     {
       step: '04',
@@ -84,9 +84,9 @@ export const personalInfo = {
   interests: [
     'Machine Learning & Deep Learning',
     'Computer Vision',
+    'NLP & Generative AI',
     'AI Application Development',
     'Data Science & Predictive Analytics',
-    'Data Visualization & BI',
   ],
 }
 
@@ -238,7 +238,7 @@ export const projects: Project[] = [
     slug: 'spamshield-bert',
     title: 'SpamShield',
     subtitle: 'Email Spam Detection with BERT',
-    summary: 'Fine-tuned DistilBERT on 190K emails for contextual spam/ham classification. Retains 97% of BERT performance while running 60% faster on CPU. Single-page dashboard with confidence metrics and session logging, deployed on Hugging Face Spaces.',
+    summary: 'Fine-tuned DistilBERT on 190K emails for contextual spam/ham classification. Retains 97% of BERT accuracy while running 60% faster on CPU. Single-page dashboard with confidence metrics and session logging, deployed on Hugging Face Spaces.',
     category: 'NLP · Transformer',
     year: '2026',
     client: 'Self-initiated',

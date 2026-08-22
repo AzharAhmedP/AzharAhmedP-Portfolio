@@ -26,7 +26,7 @@ export default function Approach() {
                 Data Scientist and AI/ML Developer pursuing a BS in Information Technology at the University of Sindh. Skilled in Machine Learning, Deep Learning, Data Analysis, and Python development, with hands-on experience building predictive models, neural networks, and interactive data applications.
               </p>
               <p>
-                Passionate about leveraging data-driven technologies to solve real-world problems — from crop disease detection for farmers to pneumonia diagnosis for clinicians — and continuously expanding expertise through practical projects and professional certifications.
+                Passionate about leveraging data-driven technologies to solve real-world problems — from crop disease detection to pneumonia detection from chest X-rays — and continuously expanding expertise through practical projects and professional certifications.
               </p>
             </div>
           </ScrollReveal>
@@ -35,7 +35,7 @@ export default function Approach() {
         <ScrollReveal className="mt-20">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12 border-t border-neutral-900 pt-12 text-center">
             <div>
-              <p className="text-3xl font-bold text-white">{projects.length}+</p>
+              <p className="text-3xl font-bold text-white">{projects.length}</p>
               <p className="text-sm text-neutral-600 mt-1">Projects Shipped</p>
             </div>
             <div>
