@@ -67,6 +67,7 @@ export const personalInfo = {
     },
   ],
   certifications: [
+    { title: 'Google AI Professional Certificate', issuer: 'Google — via Coursera', date: 'Sep 2026', image: '/images/certifications/Google_AI_Professional.jpg', primary: true },
     { title: 'Claude 101', issuer: 'Anthropic', date: 'Jul 2026', image: '/images/certifications/Claude101.jpg', primary: true },
     { title: 'Certified Java Developer', issuer: 'People\'s IT Training Programme (PITP) — MUET', date: 'Feb 2026', image: '/images/certifications/Cert_JavaDev.jpg', primary: true },
     { title: 'Academic Excellence Award — Java Development', issuer: 'People\'s IT Training Programme (PITP)', date: 'Feb 2026', image: '/images/certifications/Java_Award.jpg', primary: true },
