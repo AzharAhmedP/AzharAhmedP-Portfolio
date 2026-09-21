@@ -69,13 +69,13 @@ export const personalInfo = {
   certifications: [
     { title: 'Google AI Professional Certificate', issuer: 'Google — via Coursera', date: 'Sep 2026', image: '/images/certifications/Google_AI_Professional.jpg', primary: true },
     { title: 'Claude 101', issuer: 'Anthropic', date: 'Jul 2026', image: '/images/certifications/Claude101.jpg', primary: true },
-    { title: 'Certified Java Developer', issuer: 'People\'s IT Training Programme (PITP) — MUET', date: 'Feb 2026', image: '/images/certifications/Cert_JavaDev.jpg', primary: true },
-    { title: 'Academic Excellence Award — Java Development', issuer: 'People\'s IT Training Programme (PITP)', date: 'Feb 2026', image: '/images/certifications/Java_Award.jpg', primary: true },
     { title: 'Artificial Intelligence & Data Science', issuer: 'Saylani Mass IT Training', date: 'May 2026', image: '/images/certifications/Cert_AiDS.jpg', primary: true },
     { title: 'Introduction to Modern AI', issuer: 'Cisco Networking Academy (NetAcad)', date: 'Mar 2026', image: '/images/certifications/Intro_to_ModernAi.jpg', primary: true },
+    { title: 'Certified Java Developer', issuer: 'People\'s IT Training Programme (PITP) — MUET', date: 'Feb 2026', image: '/images/certifications/Cert_JavaDev.jpg', primary: true },
+    { title: 'Academic Excellence Award — Java Development', issuer: 'People\'s IT Training Programme (PITP)', date: 'Feb 2026', image: '/images/certifications/Java_Award.jpg', primary: true },
     { title: 'Certified Web Developer', issuer: 'People\'s IT Training Programme (PITP) — MUET', date: 'Jan 2025', image: '/images/certifications/Cert_WebDev.jpg', primary: true },
-    { title: 'Coding Night 2025 — Hackathon', issuer: 'Saylani Mass IT Training', date: 'Nov 2025', image: '/images/certifications/Cert_CodingNight.jpg', primary: false },
     { title: 'FYP 2026 — Certificate of Appreciation', issuer: 'University of Sindh', date: 'Feb 2026', image: '/images/certifications/AppCert_FYP2026.jpg', primary: false },
+    { title: 'Coding Night 2025 — Hackathon', issuer: 'Saylani Mass IT Training', date: 'Nov 2025', image: '/images/certifications/Cert_CodingNight.jpg', primary: false },
     { title: 'FET Sports Gala 2025 — Certificate of Appreciation', issuer: 'University of Sindh', date: 'Nov 2025', image: '/images/certifications/AppCert_SG2025.jpg', primary: false },
   ],
   languages: [

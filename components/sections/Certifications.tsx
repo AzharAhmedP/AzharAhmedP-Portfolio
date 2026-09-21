@@ -9,8 +9,17 @@ export default function Certifications() {
   const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null)
   const lightboxRef = useRef<HTMLDivElement>(null)
 
-  const primary = personalInfo.certifications.filter(c => c.primary)
-  const secondary = personalInfo.certifications.filter(c => !c.primary)
+  const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+  const dateValue = (date?: string) => {
+    const match = date?.match(/([A-Za-z]{3})\s+(\d{4})/)
+    if (!match) return 0
+    const month = MONTHS.indexOf(match[1])
+    return parseInt(match[2], 10) * 12 + (month < 0 ? 0 : month)
+  }
+  const byIssueDate = (a: { date?: string }, b: { date?: string }) => dateValue(b.date) - dateValue(a.date)
+
+  const primary = personalInfo.certifications.filter(c => c.primary).sort(byIssueDate)
+  const secondary = personalInfo.certifications.filter(c => !c.primary).sort(byIssueDate)
 
   useEffect(() => {
     if (!lightbox) return
